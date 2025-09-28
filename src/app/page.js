@@ -1,103 +1,175 @@
+"use client";
+
+import AreYouAPersonalShopper from "@/components/AreYouAPersonalShopper";
+import Logo from "@/components/common/Logo";
+import Footer from "@/components/Footer";
+import HowShoptaWorks from "@/components/HowShoptaWorks";
+import { Button } from "@/components/ui/button";
+import WeAreTheBest from "@/components/WeAreTheBest";
+import WhatMakesShoptaBetter from "@/components/WhatMakesShoptaBetter";
+import WhatYouGet from "@/components/WhatYouGet";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="px-5 lg:px-25">
+      <section className="text-center lg:text-start  bg-[#C9D6DF] pt-5 -mx-5 lg:-mx-25 lg:px-25 lg:bg-[url('/assets/happy-woman-desktop.png')] lg:bg-cover lg:bg-center lg:pb-[300px]">
+        <div className="flex justify-center lg:justify-between items-center">
+          <Logo />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Button
+            className={
+              "text-[20px] font-[400] bg-shopta-primary text-white w-[232px] h-[62px] hidden lg:block rounded-[5px] cursor-pointer"
+            }
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Join Waitlist
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        <h2 className="font-[900] text-shopta-text text-[36px] lg:text-[65px] leading-[44px] lg:leading-[85px] mt-6 lg:mt-[155px]">
+          Send your list. <br />
+          Skip the market <br className="hidden lg:block" /> stress
+        </h2>
+
+        <div className=" flex-col items-center justify-center py-8 px-6 mt-7 bg-[#F3F3F3] w-fit rounded-[5px] hidden lg:flex">
+          <p className="text-[#959595] text-[18px]">Coming soon</p>
+          <div className="flex gap-3 justify-center mt-3">
+            <Button disabled className={"bg-[#D2D2D2] rounded-[10px]"}>
+              <Image
+                src="/assets/playstore-icon-disabled.svg"
+                alt="playstore-icon"
+                width={18}
+                height={18}
+              />
+              <span className="text-[#949494] text-[12px]">
+                Download on Google Play
+              </span>
+            </Button>
+            <Button disabled className={"bg-[#D2D2D2] rounded-[10px]"}>
+              <Image
+                src="/assets/appstore-icon-disabled.svg"
+                alt="appstore-icon"
+                width={18}
+                height={18}
+              />
+              <span className="text-[#949494] text-[12px]">
+                Download on App Store
+              </span>
+            </Button>
+          </div>
+        </div>
+
+        <div className="flex gap-3 justify-center mt-3 lg:hidden">
+          <Button className={"bg-[#F0F0F0] rounded-[10px]"}>
+            <Image
+              src="/assets/playstore-icon-disabled.svg"
+              alt="playstore-icon"
+              width={14}
+              height={14}
+            />
+            <span className="text-[#949494] text-[9px]">
+              Download on Google Play
+            </span>
+          </Button>
+          <Button className={"bg-[#F0F0F0] rounded-[10px]"}>
+            <Image
+              src="/assets/appstore-icon-disabled.svg"
+              alt="appstore-icon"
+              width={14}
+              height={14}
+            />
+            <span className="text-[#949494] text-[9px]">
+              Download on App Store
+            </span>
+          </Button>
+        </div>
+        <div className="flex justify-center lg:hidden">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/assets/happy-woman.svg"
+            alt="happy-woman"
+            width={663}
+            height={442}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+      </section>
+
+      <section className="pt-[72px] lg:pt-[106px]">
+        <div className="lg:flex lg:items-center lg:gap-[126px]">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/assets/shopping-simplified.webp"
+            alt="shopping-simplified"
+            width={320}
+            height={260}
+            sizes="100vw"
+            className="w-full h-auto rounded-[5px]"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+          <div className="text-start">
+            <h2 className="text-[20px] lg:text-[40px] lg:leading-[50px] font-[600] lg:font-[700] text-[#272727] mt-6">
+              Shopping simplified, your <br /> personal shopper awaits
+            </h2>
+
+            <p className="text-[14px] lg:text-[18px] text-[#4A4A4A] mt-2 lg:mt-5">
+              Say goodbye to crowded stores or supermarkets, long lines, and the
+              stress of juggling your market list. Let us handle it all — you
+              enjoy your day while we do the shopping.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <HowShoptaWorks />
+
+      <section className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-center">
+        <div className="flex justify-center gap-4 relative overflow-x-hidden -mx-5 overflow-y-hidden pb-10">
+          <img className=" -mr-40 absolute" src="/assets/save-time.png" />
+
+          <div className=" w-full flex justify-center gap-4  mt-52 z-10">
+            <Image
+              src="/assets/save-time-1.webp"
+              alt="Rectangle 17"
+              width={150}
+              height={229}
+              className=""
+            />
+            <Image
+              src="/assets/save-time-2.webp"
+              alt="Rectangle 18"
+              width={150}
+              height={229}
+              className="transform translate-y-6"
+            />
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-[20px] lg:text-[40px] font-[600] lg:font-[700] text-shopta-text">
+            Save time, skip the queues
+          </h2>
+          <p className="text-[14px] lg:text-[18px] text-[#4A4A4A] mt-2">
+            Shop from your favorite supermarket online and let our personal{" "}
+            <br className="hidden lg:block" />
+            shoppers pick and pack your groceries for fast doorstep delivery.{" "}
+          </p>
+          <p className="text-[14px] lg:text-[18px] text-[#4A4A4A] mt-2">
+            Prefer to swing by after shopping online? Choose easy in-store{" "}
+            <br className="hidden lg:block" />
+            pickup, or simply walk in at your convenience. Enjoy shopping your{" "}
+            <br className="hidden lg:block" />
+            way—simple, flexible, and hassle-free.
+          </p>
+        </div>
+      </section>
+
+      <WhatMakesShoptaBetter />
+
+      <AreYouAPersonalShopper />
+
+      <WhatYouGet />
+      <WeAreTheBest />
+      <div className="mt-11 lg:mt-[136px]">
+        <Footer />
+      </div>
     </div>
   );
 }
