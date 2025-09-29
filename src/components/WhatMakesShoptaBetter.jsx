@@ -7,6 +7,7 @@ const WhatMakesShoptaBetter = () => {
     {
       id: 1,
       icon: "/assets/day-mode.svg",
+      mobileIcon: "/assets/day-mode.png",
       title: "Save Your Day",
       description:
         "No more sweating through busy markets or waiting in endless supermarket queues.",
@@ -14,6 +15,7 @@ const WhatMakesShoptaBetter = () => {
     {
       id: 2,
       icon: "/assets/value.svg",
+      mobileIcon: "/assets/value.png",
       title: "Best Value",
       description:
         "Our dedicated shoppers shop from the exact supermarkets you have ordered from.",
@@ -21,6 +23,7 @@ const WhatMakesShoptaBetter = () => {
     {
       id: 3,
       icon: "/assets/convenient.svg",
+      mobileIcon: "/assets/convenient.png",
       title: "Total Convenience",
       description:
         "Order in a few clicks, get updates, and track your delivery right to your door.",
@@ -28,6 +31,7 @@ const WhatMakesShoptaBetter = () => {
     {
       id: 4,
       icon: "/assets/love.svg",
+      mobileIcon: "/assets/love.png",
       title: "Tailored For You",
       description:
         "Your favorite brands, Shopta finds and delivers it, your way within with same day delivery.",
@@ -35,6 +39,7 @@ const WhatMakesShoptaBetter = () => {
     {
       id: 5,
       icon: "/assets/insurance.svg",
+      mobileIcon: "/assets/insurance.png",
       title: "Safe & Transparent",
       description:
         "No funny business. The product prices you see is what you pay.",
@@ -42,6 +47,7 @@ const WhatMakesShoptaBetter = () => {
     {
       id: 6,
       icon: "/assets/competency.svg", 
+      mobileIcon: "/assets/competency.png",
       title: "Security",
       description: "Our personal shoppers are meticulously verified.",
     },

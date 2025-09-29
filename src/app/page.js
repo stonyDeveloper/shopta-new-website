@@ -88,7 +88,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center lg:hidden">
           <Image
-            src="/assets/happy-woman.png"
+            src="/assets/happy-woman.webp"
             alt="happy-woman"
             width={663}
             height={442}

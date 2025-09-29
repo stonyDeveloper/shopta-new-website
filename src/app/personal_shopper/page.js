@@ -36,16 +36,19 @@ const PersonalShopper = () => {
     {
       id: 1,
       icon: "/assets/chronometer.svg",
+      mobileIcon: "/assets/chronometer.png",
       description: "Choose when you want to work and be your own boss.",
     },
     {
       id: 2,
       icon: "/assets/payment-method.svg",
+      mobileIcon: "/assets/payment-method.png",
       description: "Earn competitive pay for every complete delivery.",
     },
     {
       id: 3,
-      icon: "/assets/partners.png",
+      icon: "/assets/partners.svg",
+      mobileIcon: "/assets/partners.png",
       description: "Be part of a supportive and trustworthy team.",
     },
   ];
@@ -107,7 +110,14 @@ const PersonalShopper = () => {
             src="/assets/mobile-shopping-basket.png"
             width={100}
             height={100}
-            className="w-25 h-25 lg:w-[197px] lg:h-[197px]"
+            className="w-25 h-25  lg:hidden"
+          />
+          <Image 
+          src="/assets/shopping-basket.svg"
+          width={100}
+          height={100}
+          className="w-[197px] h-[197px] hidden lg:block"
+          
           />
         </div>
         <p className="text-[#4A4A4A] mt-4 lg:mt-9 text-[14px] lg:text-[18px] lg:leading-[28px] font-[400] leading-[20px]">
@@ -122,7 +132,7 @@ const PersonalShopper = () => {
       <section className="mt-12 lg:hidden">
         <div className="flex justify-center">
           <Image
-            src="/assets/young-happy-black-male.png"
+            src="/assets/young-happy-black-male.webp"
             width={663}
             height={442}
             alt=""
@@ -216,7 +226,7 @@ const PersonalShopper = () => {
           You need just 5 <br className="hidden lg:block" /> things to be a{" "}
           <br /> Personal Shopper <br className="hidden lg:block" /> on shopta
         </h2>
-        <div className="lg:flex lg:flex-col lg:gap-6">
+        <div className="flex flex-col lg:gap-6 gap-3">
           {personalShopperRequirements.map((requirement, index) => (
             <div
               className="text-shopta-text flex items-center gap-3 bg-white rounded-[5px] p-3 lg:px-7 h-[60px] lg:w-full lg:text-[20px]"
@@ -238,10 +248,18 @@ const PersonalShopper = () => {
       <section className="mt-12 lg:mt-[132px] lg:flex lg:flex-row-reverse lg:items-center lg:justify-between">
         <div className="flex justify-center">
           <Image
-            src="/assets/smiling-young-customer.png"
+            src="/assets/smiling-young-customer.svg"
             width={663}
             height={442}
             alt="smiling-young-customer"
+            className="hidden lg:block"
+          />
+          <Image
+            src="/assets/smiling-young-customer.webp"
+            width={663}
+            height={442}
+            alt="smiling-young-customer"
+            className="lg:hidden"
           />
         </div>
 
