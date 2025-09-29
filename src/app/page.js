@@ -59,7 +59,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex gap-3 justify-center mt-3 lg:hidden">
+        <div className="flex flex-col gap-3 justify-center mt-4 lg:hidden">
+          <p className="text-[#959595] text-[14px]">Coming soon</p>
+        <div className="space-x-4">
           <Button className={"bg-[#F0F0F0] rounded-[10px]"}>
             <Image
               src="/assets/playstore-icon-disabled.svg"
@@ -82,10 +84,11 @@ export default function Home() {
               Download on App Store
             </span>
           </Button>
+          </div>
         </div>
         <div className="flex justify-center lg:hidden">
           <Image
-            src="/assets/happy-woman.svg"
+            src="/assets/happy-woman.png"
             alt="happy-woman"
             width={663}
             height={442}
