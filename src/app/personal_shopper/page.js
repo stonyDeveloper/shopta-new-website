@@ -93,13 +93,15 @@ const PersonalShopper = () => {
         <div className="flex justify-center lg:justify-between items-center">
           <Logo />
 
-          <Button
-            className={
-              "text-[20px] font-[400] bg-shopta-primary text-white w-[232px] h-[62px] hidden lg:block rounded-[5px] cursor-pointer"
-            }
-          >
-            Join Waitlist
-          </Button>
+          <Link href="/join_waitlist">
+            <Button
+              className={
+                "text-[20px] font-[400] bg-shopta-primary text-white w-[232px] h-[62px] hidden lg:block rounded-[5px] cursor-pointer"
+              }
+            >
+              Join Waitlist
+            </Button>
+          </Link>
         </div>
 
         <div className="bg-shopta-green flex items-center lg:justify-between px-6 lg:px-20 py-3 rounded-[5px] mt-7 lg:mt-[51px]">
@@ -112,12 +114,11 @@ const PersonalShopper = () => {
             height={100}
             className="w-25 h-25  lg:hidden"
           />
-          <Image 
-          src="/assets/shopping-basket.svg"
-          width={100}
-          height={100}
-          className="w-[197px] h-[197px] hidden lg:block"
-          
+          <Image
+            src="/assets/shopping-basket.svg"
+            width={100}
+            height={100}
+            className="w-[197px] h-[197px] hidden lg:block"
           />
         </div>
         <p className="text-[#4A4A4A] mt-4 lg:mt-9 text-[14px] lg:text-[18px] lg:leading-[28px] font-[400] leading-[20px]">
@@ -321,9 +322,11 @@ const PersonalShopper = () => {
         <p className="text-white text-[14px] lg:text-[28px] mt-4 lg:mt-1">
           Join us and help make shopping easier for everyone!
         </p>
-        <Button className="bg-shopta-primary text-white mt-5 w-full lg:w-[412px] text-[18px] lg:text-[20px] py-4 lg:py-5 h-[49px] lg:h-[62px] rounded-[5px]">
-          Join the waitlist
-        </Button>
+        <Link href="/join_waitlist">
+          <Button className="bg-shopta-primary text-white mt-5 w-full lg:w-[412px] text-[18px] lg:text-[20px] py-4 lg:py-5 h-[49px] lg:h-[62px] rounded-[5px]">
+            Join the waitlist
+          </Button>
+        </Link>
       </div>
       <div className="mt-11 lg:mt-[136px]">
         <Footer />

@@ -62,15 +62,15 @@ const HowShoptaWorks = () => {
   };
 
   return (
-    <section className="pt-7 lg: pt-[107px]">
+    <section className="pt-7 lg:pt-[107px] md:px-6 lg:px-8 max-w-[1400px] mx-auto">
       <div>
-        <h2 className="text-[20px] font-[600] text-[#272727] lg:text-center lg:text-[40px] lg:font-[700]">
+        <h2 className="text-[20px] font-[600] text-[#272727] md:text-center md:text-[32px] lg:text-[40px] lg:font-[700]">
           How shopta works
         </h2>
       </div>
 
       <motion.div
-        className="space-y-6 mt-5 lg:mt-9 lg:grid lg:grid-cols-4 lg:gap-4"
+        className="space-y-6 mt-5 md:space-y-0 md:grid md:grid-cols-2 md:gap-6 lg:mt-9 lg:grid-cols-4 lg:gap-4 xl:gap-6 2xl:gap-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -80,20 +80,22 @@ const HowShoptaWorks = () => {
           <motion.div
             key={step.id}
             variants={itemVariants}
-            className="bg-white border border-[#DEDEDE] rounded-[10px] py-4 px-6 hover:shadow-md transition-shadow duration-300 lg:w-[295px] lg:h-[242px]"
+            className="bg-white border border-[#DEDEDE] rounded-[10px] py-4 px-6 transition-shadow duration-300 md:py-6 md:px-7 lg:min-h-[242px] lg:h-auto xl:min-h-[260px] 2xl:min-h-[280px]"
           >
-            <div className="space-x-6">
+            <div className="flex flex-col md:space-y-0 space-x-6 md:space-x-0 h-full">
               <div
-                className={`${step.indicatorColor} text-white w-[35px] h-[35px] rounded-full flex items-center justify-center text-[16px] font-bold flex-shrink-0`}
+                className={`${step.indicatorColor} text-white w-[35px] h-[35px] md:w-[40px] md:h-[40px] xl:w-[45px] xl:h-[45px] rounded-full flex items-center justify-center text-[16px] md:text-[18px] xl:text-[20px] font-bold flex-shrink-0`}
               >
                 {step.number}
               </div>
 
-              <div className="flex-1 mt-2 lg:mt-9">
-                <h3 className="text-[16px] lg:text-[20px] font-[500] text-shopta-text">
+              <div className="flex-1 mt-2 md:mt-4 lg:mt-6 xl:mt-8 min-w-0">
+                <h3 className="text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-[500] text-shopta-text break-words">
                   {step.title}
                 </h3>
-                <p className="text-[14px] lg:text-[18px] text-[#4A4A4A] lg:mt-3">{step.description}</p>
+                <p className="text-[14px] md:text-[16px] lg:text-[17px] xl:text-[18px] text-[#4A4A4A] mt-1 md:mt-2 lg:mt-3 break-words leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             </div>
           </motion.div>
