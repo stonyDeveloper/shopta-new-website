@@ -24,8 +24,8 @@ const Footer = () => {
       title: "Our company",
       items: [
         { label: "About us", route: "/about_us" },
-        { label: "Terms of service", route: "#" },
-        { label: "Privacy policy", route: "#" }
+        { label: "Terms of service", route: "/terms_of_service" },
+        { label: "Privacy policy", route: "/privacy_policy" }
       ]
     },
     {
