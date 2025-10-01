@@ -10,6 +10,7 @@ import WhatMakesShoptaBetter from "@/components/WhatMakesShoptaBetter";
 import WhatYouGet from "@/components/WhatYouGet";
 import Image from "next/image";
 import Link from "next/link";
+import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 
 export default function Home() {
   const slidingImages = [
@@ -35,6 +36,7 @@ export default function Home() {
     },
   ];
   return (
+    <SmoothScrollProvider>
     <div className="px-5 lg:px-25">
       <section className="text-center lg:text-start  bg-[#C9D6DF] pt-5 -mx-5 lg:-mx-25 lg:px-25 lg:bg-[url('/assets/happy-woman-desktop.png')] lg:bg-cover lg:bg-center lg:pb-[300px]">
         <div className="flex justify-center lg:justify-between items-center">
@@ -247,5 +249,6 @@ export default function Home() {
         <Footer />
       </div>
     </div>
+    </SmoothScrollProvider>
   );
 }

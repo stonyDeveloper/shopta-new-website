@@ -210,7 +210,7 @@ const PrivacyPolicy = () => {
     
       const propContent = {
         title: "Privacy Policy",
-        subTitle: "Last updated on 25-09-2024",
+        subTitle: "Last updated on August 2025",
         headerBg: "bg-[#1852C3]",
         navLinks: navLinks,
       };

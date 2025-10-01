@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 
 const PersonalShopper = () => {
   const containerVariants = {
@@ -88,6 +89,7 @@ const PersonalShopper = () => {
     },
   ];
   return (
+    <SmoothScrollProvider>
     <div className="px-5 lg:px-25">
       <section className="pt-5">
         <div className="flex justify-center lg:justify-between items-center">
@@ -332,6 +334,7 @@ const PersonalShopper = () => {
         <Footer />
       </div>
     </div>
+    </SmoothScrollProvider>
   );
 };
 

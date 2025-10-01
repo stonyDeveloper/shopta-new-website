@@ -2,8 +2,6 @@
 import { Archivo } from "next/font/google";
 import "./globals.css";
 import { Toaster } from 'react-hot-toast'
-import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
-import Logo from "@/components/common/Logo";
 
 
 
@@ -23,9 +21,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${archivo.variable} antialiased`}
       >
-        <SmoothScrollProvider>
         {children}
-        </SmoothScrollProvider>
 
         <Toaster 
           position="top-center"
