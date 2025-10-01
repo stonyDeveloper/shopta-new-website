@@ -152,7 +152,7 @@ export default function Home() {
         <div className="flex justify-center lg:items-center gap-4 relative overflow-x-hidden -mx-5 lg:-mx-25 overflow-y-hidden pb-10">
           {/* <img className=" -mr-40 absolute" src="/assets/save-time.png" /> */}
 
-          <div className=" w-full flex justify-center gap-4  z-10 pl-11">
+          <div className=" w-full flex md:hidden xl:flex justify-center gap-4  z-10 pl-11 ">
             <Image
               src="/assets/woman-on-phone.png"
               alt="Rectangle 17"
@@ -197,47 +197,47 @@ export default function Home() {
 
       <WhatMakesShoptaBetter />
       <section className="lg:mb-[96px] mb-[60px]">
-  <div>
-    <h2 className="text-[20px] font-[600] text-[#272727] lg:text-center lg:text-[40px] lg:font-[700] lg:leading-[50px]">
-      You can shop from any of your <br className="hidden lg:block" />{" "}
-      favorite stores
-    </h2>
-  </div>
+        <div>
+          <h2 className="text-[20px] font-[600] text-[#272727] lg:text-center lg:text-[40px] lg:font-[700] lg:leading-[50px]">
+            You can shop from any of your <br className="hidden lg:block" />{" "}
+            favorite stores
+          </h2>
+        </div>
 
-  <div className="hidden lg:block overflow-hidden relative mt-8">
-    <div className="flex gap-9 animate-scroll-desktop">
-      {[...Array(3)].map((_, setIndex) =>
-        slidingImages.map((image) => (
-          <Image
-            key={`desktop-${setIndex}-${image.id}`}
-            src={image.src}
-            alt={image.alt}
-            width={127}
-            height={80}
-            className="flex-shrink-0"
-          />
-        ))
-      )}
-    </div>
-  </div>
+        <div className="hidden lg:block overflow-hidden relative mt-8">
+          <div className="flex gap-9 animate-scroll-desktop">
+            {[...Array(3)].map((_, setIndex) =>
+              slidingImages.map((image) => (
+                <Image
+                  key={`desktop-${setIndex}-${image.id}`}
+                  src={image.src}
+                  alt={image.alt}
+                  width={127}
+                  height={80}
+                  className="flex-shrink-0"
+                />
+              ))
+            )}
+          </div>
+        </div>
 
-  <div className="block lg:hidden overflow-hidden relative mt-5">
-    <div className="flex gap-9 animate-scroll-mobile">
-      {[...Array(3)].map((_, setIndex) =>
-        slidingImages.map((image) => (
-          <Image
-            key={`mobile-${setIndex}-${image.id}`}
-            src={image.mobileSrc}
-            alt={image.alt}
-            width={68}
-            height={43}
-            className="flex-shrink-0"
-          />
-        ))
-      )}
-    </div>
-  </div>
-</section>
+        <div className="block lg:hidden overflow-hidden relative mt-5">
+          <div className="flex gap-9 animate-scroll-mobile">
+            {[...Array(3)].map((_, setIndex) =>
+              slidingImages.map((image) => (
+                <Image
+                  key={`mobile-${setIndex}-${image.id}`}
+                  src={image.mobileSrc}
+                  alt={image.alt}
+                  width={68}
+                  height={43}
+                  className="flex-shrink-0"
+                />
+              ))
+            )}
+          </div>
+        </div>
+      </section>
 
       <AreYouAPersonalShopper />
 
