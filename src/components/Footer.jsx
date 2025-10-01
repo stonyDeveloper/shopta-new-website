@@ -6,19 +6,33 @@ const Footer = () => {
   const footerContent = [
     {
       title: "Connect with us",
-      items: ["Linkedin"]
+      items: [
+        { label: "Linkedin", route: "#" }
+      ]
     },
     {
       title: "Categories",
-      items: ["FMCGs", "Personal Care and Health", "Baby and Toddler", "Wines and beverages", "Groceries"]
+      items: [
+        { label: "FMCGs", route: "#" },
+        { label: "Personal Care and Health", route: "#" },
+        { label: "Baby and Toddler", route: "#" },
+        { label: "Wines and beverages", route: "#" },
+        { label: "Groceries", route: "#" }
+      ]
     },
     {
       title: "Our company",
-      items: ["About us", "Terms of service", "Privacy policy"]
+      items: [
+        { label: "About us", route: "/about_us" },
+        { label: "Terms of service", route: "#" },
+        { label: "Privacy policy", route: "#" }
+      ]
     },
     {
       title: "Contact",
-      items: ["Shoptamarket@gmail.com"]
+      items: [
+        { label: "Shoptamarket@gmail.com", route: "mailto:Shoptamarket@gmail.com" }
+      ]
     }
   ]
 
@@ -34,11 +48,11 @@ const Footer = () => {
               <div className='flex flex-col gap-1'>
                 {item.items?.map((linkItem) => (
                   <Link 
-                    key={linkItem} 
-                    href="#" 
+                    key={linkItem.label} 
+                    href={linkItem.route} 
                     className="text-gray-600 text-[14px] hover:text-shopta-primary transition-colors"
                   >
-                    {linkItem}
+                    {linkItem.label}
                   </Link>
                 ))}
               </div>
@@ -63,11 +77,11 @@ const Footer = () => {
                 <div className='flex flex-col gap-2'>
                   {item.items?.map((linkItem) => (
                     <Link 
-                      key={linkItem} 
-                      href="#" 
+                      key={linkItem.label} 
+                      href={linkItem.route} 
                       className="text-gray-600 text-[16px] hover:text-shopta-primary transition-colors whitespace-nowrap"
                     >
-                      {linkItem}
+                      {linkItem.label}
                     </Link>
                   ))}
                 </div>
